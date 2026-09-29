@@ -75,7 +75,7 @@ m/z
 intensity
 ```
 
-A built-in preview window allows manual mapping of source columns to `m/z` and intensity.
+A built-in preview window allows manual mapping of source columns to `m/z` and `intensity`.
 
 Example:
 
