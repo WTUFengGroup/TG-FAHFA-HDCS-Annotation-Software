@@ -1,6 +1,6 @@
 # TG-FAHFA HDCS Annotation Software
 
-A graphical software for **structural annotation of TG-FAHFA lipids using EAciD-MS/MS spectra**.
+A desktop application for **structural annotation of TG-FAHFA lipids using EAciD-MS/MS spectra**.
 
 The software integrates TG-FAHFA candidate generation, theoretical fragmentation prediction, experimental spectrum matching, hierarchical diagnostic-ion evaluation, HDCS scoring, positional-isomer assessment, and mixture analysis in a single workflow.
 
@@ -62,11 +62,11 @@ Diagnostic ions are organized into four evidence levels:
 | **L3** | FAHFA *sn*-position evidence                             |
 | **L4** | FAHFA internal ester-bond position evidence              |
 
-The scoring framework combines diagnostic-ion coverage with missing and contradictory evidence. Position-specific assignments are retained as unresolved when sufficient L4 evidence is unavailable.
+The scoring framework combines diagnostic-ion coverage with missing-evidence penalties and position-specific L4 support. Contradictory evidence is evaluated separately during positional-isomer and mixture assessment. Position-specific assignments are retained as unresolved when sufficient L4 evidence is unavailable.
 
 ## Input
 
-The program accepts comma- or tab-delimited peak-list files.
+The program accepts `.csv` peak-list files.
 
 At minimum, the input must contain:
 
@@ -90,6 +90,8 @@ m/z,intensity
 
 The highest-intensity valid peak is used as the precursor ion.
 
+A demo CSV file is available from the **Releases** page for testing the workflow.
+
 ## Installation
 
 Download the latest packaged application from the **Releases** page:
@@ -97,7 +99,7 @@ Download the latest packaged application from the **Releases** page:
 - **Windows:** download the `.exe` file and run it directly.
 - **macOS:** download the `.zip` file, extract it, and open the `.app` application.
 
-No Python installation or additional dependency setup is required.
+The packaged applications do not require a separate Python installation or additional dependency setup.
 
 > **macOS note:** The application can be launched directly from the extracted folder; moving it to the **Applications** folder is optional.  
 > On first launch, macOS may block the application because it is not notarized by Apple. If this occurs, open **System Settings → Privacy & Security**, then select **Open Anyway** to authorize the application.
